@@ -21,3 +21,8 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+bazel-bin
+bazel-example-haskell-with-bazel
+bazel-out
+bazel-testlogs

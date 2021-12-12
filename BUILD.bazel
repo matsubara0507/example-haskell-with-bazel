@@ -1,0 +1,45 @@
+package(default_visibility = ["//visibility:public"])
+
+load(
+    "@rules_haskell//haskell:defs.bzl",
+    "haskell_library",
+    "haskell_binary",
+)
+
+load(
+    "//:build/common.bzl",
+    "GHC_FLAGS",
+)
+load(
+    "//build/rules/haskell:def.bzl",
+    "paths_module",
+)
+
+load(
+    "@rules_haskell//haskell:defs.bzl",
+    "haskell_library",
+)
+
+haskell_library(
+    name = "example-library",
+    src_strip_prefix = "src",
+    srcs = glob(["src/**/*.hs"]),
+    deps = ["@stackage//:base"],
+)
+
+paths_module(
+    name = "paths_module",
+    package = "example-haskell-with-bazel",
+    version = "1.0.0",
+)
+
+haskell_binary(
+    name = "example-bin",
+    srcs = glob(["app/**/*.hs"]),
+    deps = [
+        ":example-library",
+        ":paths_module",
+        "@stackage//:base",
+    ],
+    compiler_flags = GHC_FLAGS,
+)
