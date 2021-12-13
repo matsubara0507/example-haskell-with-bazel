@@ -5,19 +5,31 @@ on:
     branches:
     - main
 jobs:
-  run:
-    name: Run Example
-    runs-on: ${{ matrix.operating-system }}
-    strategy:
-      matrix:
-        operating-system:
-          - ubuntu-18.04
-          - macos-10.15
-          - windows-2019
-      fail-fast: false
+  ubuntu:
+    name: Run Example (Ubuntu)
+    runs-on: ubuntu-18.04
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: run bazel example
+      run: bazel run //:example-bin
 
+  mac:
+    name: Run Example (macOS)
+    runs-on: macos-10.15
+    env:
+      BAZEL_USE_CPP_ONLY_TOOLCHAIN: 1
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: run bazel example
+      run: bazel run //:example-bin
+
+  windows:
+    name: Run Example (Windows)
+    runs-on: windows-2019
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: run bazel example
       run: bazel run //:example-bin
