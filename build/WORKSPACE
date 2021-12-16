@@ -34,7 +34,6 @@ stack_snapshot(
     name = "stackage",
     packages = ["base"],
     local_snapshot = "//:stack-snapshot.yaml",
-    haddock = False,
 )
 
 load(
