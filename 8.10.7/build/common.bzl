@@ -11,3 +11,5 @@ GHC_FLAGS = [
     "-optP-Wno-nonportable-include-path",
     "-DBAZEL_BUILD=1",
 ]
+
+GHC_VERSION = "8.10.7"

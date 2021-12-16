@@ -12,3 +12,5 @@ GHC_FLAGS = [
     "-DBAZEL_BUILD=1",
     "-XGHC2021",
 ]
+
+GHC_VERSION = "9.2.1"
