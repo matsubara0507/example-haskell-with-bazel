@@ -1,5 +1,3 @@
 # example-haskell-with-bazel
 
-```
-$ bazelisk run //:example-bin
-```
+Test for [tweag/rules_haskell](https://github.com/tweag/rules_haskell)
