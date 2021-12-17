@@ -13,9 +13,9 @@ http_archive(
 
 http_archive(
     name = "rules_haskell",
-    strip_prefix = "rules_haskell-1578af163c47e6b83ace0ee8a015b38d885e537e",
-    urls = ["https://github.com/tweag/rules_haskell/archive/1578af163c47e6b83ace0ee8a015b38d885e537e.tar.gz"],
-    sha256 = "db2d22eee55089f074641ac397b5db4d9baf4ceced58ac8d836c1219ec966b05",
+    strip_prefix = "rules_haskell-abc679267528c34a9c32fed9ef02f928bb66aa9e",
+    urls = ["https://github.com/tweag/rules_haskell/archive/abc679267528c34a9c32fed9ef02f928bb66aa9e.tar.gz"],
+    sha256 = "142dc0edc26d08c0368a1520cb53421db111fd3c5def879da433284f9c2f322c",
 )
 
 load(
