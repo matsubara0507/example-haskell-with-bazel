@@ -16,7 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: run bazel example
-      run: bazel run //:example-bin
+      run: bazel run --verbose_failures //:example-bin
       working-directory: ${{ matrix.ghc }}
 
   mac:
@@ -32,7 +32,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: run bazel example
-      run: bazel run //:example-bin
+      run: bazel run --verbose_failures //:example-bin
       working-directory: ${{ matrix.ghc }}
 
   windows:
@@ -46,5 +46,5 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: run bazel example
-      run: bazel run --crosstool_top=@rules_haskell_ghc_windows_amd64//:cc_toolchain //:example-bin
+      run: bazel run --verbose_failures --crosstool_top=@rules_haskell_ghc_windows_amd64//:cc_toolchain //:example-bin
       working-directory: ${{ matrix.ghc }}
