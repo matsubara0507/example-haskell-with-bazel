@@ -32,7 +32,7 @@ load(
 
 stack_snapshot(
     name = "stackage",
-    packages = ["base"],
+    packages = ["base", "unliftio-core"],
     local_snapshot = "//:stack-snapshot.yaml",
 )
 
