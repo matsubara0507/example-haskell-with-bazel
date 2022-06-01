@@ -13,8 +13,8 @@ http_archive(
 
 http_archive(
     name = "rules_haskell",
-    strip_prefix = "rules_haskell-1d10367157c22031df0e9f5ceab355eedd2c8403",
-    urls = ["https://github.com/tweag/rules_haskell/archive/1d10367157c22031df0e9f5ceab355eedd2c8403.tar.gz"],
+    strip_prefix = "rules_haskell-5400e3833067c69f65e8b9a3f48d10656b0c4989",
+    urls = ["https://github.com/tweag/rules_haskell/archive/5400e3833067c69f65e8b9a3f48d10656b0c4989.tar.gz"],
 )
 
 load(
