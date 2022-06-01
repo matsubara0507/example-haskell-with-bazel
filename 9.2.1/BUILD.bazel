@@ -40,6 +40,7 @@ haskell_binary(
         ":example-library",
         ":paths_module",
         "@stackage//:base",
+        "@stackage//:unliftio-core",
     ],
     compiler_flags = GHC_FLAGS,
 )

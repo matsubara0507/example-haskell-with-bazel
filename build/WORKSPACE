@@ -13,9 +13,8 @@ http_archive(
 
 http_archive(
     name = "rules_haskell",
-    strip_prefix = "rules_haskell-1b70303402fe372464a9c69cce70ac30ac8d4253",
-    urls = ["https://github.com/tweag/rules_haskell/archive/1b70303402fe372464a9c69cce70ac30ac8d4253.tar.gz"],
-    sha256 = "a243d5ab940cff6217e4d8ce9c94af5abaa9d11e0e15c15d0b8dd597aad69a6f",
+    strip_prefix = "rules_haskell-5400e3833067c69f65e8b9a3f48d10656b0c4989",
+    urls = ["https://github.com/tweag/rules_haskell/archive/5400e3833067c69f65e8b9a3f48d10656b0c4989.tar.gz"],
 )
 
 load(
@@ -32,7 +31,7 @@ load(
 
 stack_snapshot(
     name = "stackage",
-    packages = ["base"],
+    packages = ["base", "unliftio-core"],
     local_snapshot = "//:stack-snapshot.yaml",
 )
 
